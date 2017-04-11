@@ -1,0 +1,53 @@
+{
+	"file_version": 1,
+	"file_creator": "Sublime Text",
+	"file_author": "Chang Liu",
+	"file_class": "creasePattern",
+	"frame_title": "Local flat-foldability example",
+	"frame_attributes": ["2D"],
+	"vertices_coords": [
+		[-10, -10],
+		[-10, 10],
+		[-1, 10],
+		[10, 10],
+		[10, 1],
+		[10, -10],
+		[0, 0]		
+	],
+	"faces_vertices": [
+		[0,6,1],
+		[1,6,2],
+		[2,6,3],
+		[3,6,4],
+		[4,6,5],
+		[5,6,0]
+	],
+	"edges_vertices": [
+		[0,1],
+		[1,2],
+		[2,3],
+		[3,4],
+		[4,5],
+		[0,5],
+		[0,6],
+		[1,6],
+		[2,6],
+		[3,6],
+		[4,6],
+		[5,6]
+	],
+	"edges_assignment": [
+		"B",
+		"B",
+		"B",
+		"B",
+		"B",
+		"B",
+		"U",
+		"U",
+		"U",
+		"U",
+		"U",
+		"U"
+	]
+}
