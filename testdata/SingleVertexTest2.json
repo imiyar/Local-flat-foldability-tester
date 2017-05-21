@@ -1,0 +1,41 @@
+{
+	"file_version": 1,
+	"file_creator": "Sublime Text",
+	"file_author": "Chang Liu",
+	"file_class": "creasePattern",
+	"frame_title": "Local flat-foldability: Single Vertex Example - Odd K",
+	"frame_attributes": ["2D"],
+	"vertices_coords": [
+		[-10, -5],
+		[-5, 10],
+		[5, 10],
+		[10, -5],
+		[0, 0]	
+	],
+	"faces_vertices": [
+		[0,4,1],
+		[1,4,2],
+		[2,4,3],
+		[3,4,0]
+	],
+	"edges_vertices": [
+		[0,1],
+		[1,2],
+		[2,3],
+		[3,0],
+		[0,4],
+		[1,4],
+		[2,4],
+		[3,4]
+	],
+	"edges_assignment": [
+		"B",
+		"B",
+		"B",
+		"B",
+		"U",
+		"U",
+		"U",
+		"U"
+	]
+}
