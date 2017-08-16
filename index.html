@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Chang Liu">
+	<meta name="description" content="Local Flat-foldability Tester">
+
+	<title>Local Flat-foldability Tester</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.7.1/coffee-script.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col text-center text-muted py-4">
+				<h3>Local Flat-foldability Tester</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<ul class="col nav nav-tabs nav-justified" role="tablist">
+  				<li class="nav-item">
+  					<a class="nav-link active" data-toggle="tab" href="#import_wrapper" role="tab">
+    					Import FOLD Format JSON File
+    				</a>
+  				</li>
+  				<li class="nav-item">
+    				<a class="nav-link" data-toggle="tab" href="#draw_wrapper" role="tab">Draw Crease Pattern</a>
+  				</li>
+  				<li class="nav-item">
+    				<a class="nav-link" data-toggle="tab" href="#about_wrapper" role="tab">About Local Flat-foldability Tester</a>
+  				</li>
+			</ul>
+		</div>
+
+		<div class="row my-4">
+			<div class="col tab-content">
+
+  				<div class="tab-pane fade rounded" id="draw_wrapper" role="tabpanel">
+  					<div class="row align-items-center bg-faded">
+  						<div class="col-3 text-center p-4">
+							<div class="row btn-group-vertical" data-toggle="buttons">
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="add_vertex" autocomplete="off">
+									Add Vertex
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="move_vertex" autocomplete="off">
+									Move Vertex
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="add_crease" autocomplete="off">
+									Add Crease
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="add_boundary" autocomplete="off">
+									Add Boundary
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="same_x" autocomplete="off">
+									Same X
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="same_y" autocomplete="off">
+									Same Y
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="same_length_x" autocomplete="off">
+									Same Length X
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="same_length_y" autocomplete="off">
+									Same Length Y
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="delete" autocomplete="off">
+									Delete
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="option" value="clear" autocomplete="off">
+									Clear
+								</label>
+								
+  							</div>
+  							<div class="row justify-content-center">
+  								<button id="check" type="button" class="btn btn-primary m-2">Check!</button>
+  							</div>
+						</div>
+						<div id="svg_wrapper" class="col-9" style="border: solid #EEEEEE; background: white">
+							
+		    			</div>
+		    		</div>
+  				</div>
+
+  				<div class="tab-pane fade show active" id="import_wrapper" role="tabpanel">
+  				  	<p> Import JSON file in FOLD format: </p>
+					<input type="file" id="file">
+					<div id="result" class="row"></div>
+  				</div>
+
+  				<div class="tab-pane fade" id="about_wrapper" role="tabpanel">
+  					<p>This app is under development.</p>
+  				</div>
+
+			</div>
+		</div>
+		
+		<div class="row justify-content-center">
+			<button id="solve" type="button" class="btn btn-primary m-2">Solve!</button>
+			<button id="downloadCP" type="button" class="btn btn-primary m-2">Download crease pattern</button>
+		</div>
+
+	</div>
+	<a id="downloadLink"></a>
+	<script src="js/bundle.js"></script>
+</body>
+</html>
